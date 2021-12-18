@@ -18,10 +18,6 @@ Route::get('/sample', function () {
     return '';
 })->name('sample');
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home')->middleware('auth');
-
 Route::get('post/{post:slug}', function (Post $post) {
     return view('public.post', $post);
 })->name('post');

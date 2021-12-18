@@ -1,4 +1,4 @@
-@extends('public.app')
+@extends('public.layouts.app')
 
 @section('content')
     @include('public.layouts.navigation',['page'=>'home'])
