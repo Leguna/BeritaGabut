@@ -12,13 +12,13 @@
                 @foreach ($posts as $post)
                     <!-- Post preview-->
                     <div class="post-preview">
-                        <a href="post.html">
+                        <a href="{{ route('post', $post) }}">
                             <h2 class="post-title">{{ $post->title }}</h2>
                             <h3 class="post-subtitle">{{ $post->subtitle }}</h3>
                         </a>
                         <p class="post-meta">
                             Posted by
-                            <a href="{{ route('post', $post) }}">{{ $post->user->name }}</a>
+                            <a href="">{{ $post->user->name }}</a>
                             on {{ \Carbon\Carbon::parse($post->created_at)->diffForHumans() }}
                         </p>
                     </div>

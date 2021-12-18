@@ -22,7 +22,7 @@
                   @if (Route::has('login'))
                       @auth
                           <li class="nav-item">
-                              <a href="{{ route('adminhome') }}"
+                              <a href="{{ route('admin.home') }}"
                                   class="nav-link px-lg-3 py-3 py-lg-4 text-warning">Admin</a>
                           </li>
                       @else
