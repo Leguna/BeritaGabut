@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
     <meta charset="utf-8" />
@@ -18,7 +18,7 @@
         rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}" />
     @yield('head')
 </head>
 

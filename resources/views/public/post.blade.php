@@ -12,7 +12,7 @@
                         <span class="meta">
                             Posted by
                             <a href="#!">{{ $post->user->name }}</a>
-                            at {{ $post->getCreatedAt()->isoFormat('LLLL') }}
+                            on {{ $post->getCreatedAt()->diffForHumans() }}
                         </span>
                     </div>
                 </div>
@@ -24,7 +24,8 @@
         <div class="container px-4 px-lg-5">
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
-                    {{ $post->content }}
+                    {!! $post->content !!}
+                    <br><br><b>Posted at:</b> <br>{{ $post->getCreatedAt()->isoFormat('LLLL') }}
                 </div>
             </div>
         </div>
