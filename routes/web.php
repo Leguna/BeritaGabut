@@ -9,17 +9,15 @@ Route::get('/', function () {
     return view('public.home', ['posts' => Post::all()]);
 })->name('home');
 Route::get('/about', function () {
-    return '';
+    return view('public.about');
 })->name('about');
 Route::get('/contact', function () {
-    return '';
+    return view('public.contact');
 })->name('contact');
-Route::get('/sample', function () {
-    return '';
-})->name('sample');
+
 
 Route::get('post/{post:slug}', function (Post $post) {
-    return view('public.post', $post);
+    return view('public.post')->with(['post' => $post]);
 })->name('post');
 
 

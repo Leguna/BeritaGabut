@@ -23,6 +23,7 @@ class PostFactory extends Factory
             'subtitle' => $this->faker->randomElement($subtitle),
             'content' => $this->faker->paragraph(20),
             'slug' => Str::slug($title, '-'),
+            'thumbnails' => $this->faker->imageUrl(1280, 720),
             'user_id' => $this->faker->randomElement($users),
         ];
     }
